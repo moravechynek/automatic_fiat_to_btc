@@ -5,12 +5,14 @@
 // @description  Bitcoin website converter script
 // @author       Me
 // @match        *://*/*
-// @grant        none
+// @grant        GM_registerMenuCommand
 // ==/UserScript==
 
 (function() {
     'use strict';
     //console.log('HELLO BITCOIN');
+    GM_registerMenuCommand("Convert", () => convert_to_satoshis());
+    GM_registerMenuCommand("Update rates", () => convert_to_satoshis(true));
     let latest_rates = null;
     const priceRE = /(\d{1,3}(?:[\s.]?\d{3})*(?:,\d{1,2})?)(?:\s?)(Kč|CZK|€|\$|USD|EUR|,-)/gi;
     function detectCurrency(suffix){
