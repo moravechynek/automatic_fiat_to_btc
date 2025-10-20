@@ -10,6 +10,13 @@
 
 ## Usage
 
+If you don't want to restart a browser every time you use the script, let the Tampermonkey extension be always ✅ Enabled.
+
+1. Enable script (name: Fiat to satoshis)
+2. Visit the page you want to convert prices on
+    - if you do step 2 first and then step 1, you have to reload the page
+3. (Optional) disable script
+
 |                 | shortcut       | description                                                                       |
 |-----------------|----------------|-----------------------------------------------------------------------------------|
 | convert to sats | Ctrl + Alt + C | scan page without API request, useful for dynamic price conversion                |
