@@ -7,7 +7,6 @@ const DESCRIPTION = 'sats';
 test('EUR float', () => {
   const input = "89,99 €";
   const output = convertText(input, RATES);
-  const price = (89.99/RATES.bitcoin.eur*100000000).toFixed(2);
-  console.log(price);
-  expect(output).toMatch(price + ' ' + DESCRIPTION);
+  const price = Math.round(89.99/RATES.bitcoin.eur*100000000);
+  expect(output).toMatch("85 161 " + DESCRIPTION);
 });

@@ -17,21 +17,19 @@ If you don't want to restart a browser every time you use the script, let the Ta
     - if you do step 2 first and then step 1, you have to reload the page
 3. (Optional) disable script
 
-|                 | shortcut       | description                                                                       |
-|-----------------|----------------|-----------------------------------------------------------------------------------|
-| convert to sats | Ctrl + Alt + C | scan page without API request, useful for dynamic price conversion                |
-| update rates    | Ctrl + Alt + G | request for latest rates, API is available only few times per minute              |
+|                 | menu command   | shortcut       | description                                                                      |
+|-----------------|----------------|----------------|----------------------------------------------------------------------------------|
+| convert to sats | Convert        | Ctrl + Alt + C |scan page without API request, useful for dynamic price conversion                |
+| update rates    | Update rates   | Ctrl + Alt + G |request for latest rates, API is available only few times per minute              |
 
 ## How it work's
 
 The script goes through all elements on a website and converts prices to satoshis.
-This might increase loading time of a web page a bit.
 
 ## Limitations
 
-- Some data structures are hard to extract and not implemented yet for example:
-  - \<span\>50 Kč\<span\>/&nbsp;ks\</span\>\</span\>
-  - \<div\>1&nbsp;123\<span\> – \</span\>3&nbsp;987&nbsp;Kč\</div\>
+- Some price formats haven't been implemented yet:
+  - 100 - 1000 Kč bad conversion to 100 - 42 081 sats (100 Kč - 1000 Kč, is ok)
 - $, € and czk only (for now)
 - Free API is available only few times per minute
 
